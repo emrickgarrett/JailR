@@ -8,3 +8,7 @@ document.addEventListener('mouseup',function(event)
     if(sel.length)
         chrome.extension.sendRequest({'message':'setText','data': sel},function(response){})
 });
+
+$(function() {
+    $( document ).tooltip();
+});
