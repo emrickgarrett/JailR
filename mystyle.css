@@ -1,11 +1,11 @@
 body{
-    background: #E6E6DC;
+    background: #3F94EE;
 }
 
 .header{
     font-size:6em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #00628B;
+    font-family: 'Pacifico', cursive;
+    color: black;
 }
 
 .result-content{
@@ -16,7 +16,8 @@ body{
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-    background: #E6E6DC;
+    background: #EBEBEB;
+    border: 1px darkgray solid;
 }
 
 .result-table .tr{
@@ -35,7 +36,7 @@ body{
 .mugshot{
     width:10em;
     height:10em;
-    border: 2px #00628B solid;
+    border: 2px darkgray solid;
 }
 
 .charges{
@@ -52,7 +53,7 @@ body{
 
 .arrow-text-left, .arrow-text-right{
     font-size:3em;
-    font-weight:bold;
+    font-family: 'Pacifico', cursive;
 }
 
 .arrow-text-right{
