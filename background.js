@@ -23,7 +23,7 @@ function savetext(info,tab) {
         //alert("text=" + seltext);
 
         var firstName = seltext.substring(0, seltext.indexOf(" "));
-        var lastName = seltext.substring(seltext.indexOf(" ") + 1, seltext.length);
+        var lastName = seltext.substring(seltext.lastIndexOf(" ") + 1, seltext.length);
 
         var searchQuery = confirmResults(firstName, lastName);
 
@@ -64,12 +64,12 @@ function processResults(result){
 
 function popup(result)
 {
-    var generator=window.open('','name','height=800,width=1000');
+    var generator=window.open('','name','height=600,width=800');
 
     generator.document.write('<html><head><title>Popup</title>');
     generator.document.write("<link rel='stylesheet' href='mystyle.css'></head><body>");
 
-    generator.document.write("<div style='text-align:center;'><span class='header'>Results:</span></div>");
+    //generator.document.write("<div style='text-align:center;'><span class='header'>Results:</span></div>");
     generator.document.write("<div class='result-content'> <table class='result-table'");
     for(var i = 0; i < result.records.length; i++){
         if((i % 4 == 0 && i != 0) || i == result.records.length - 1)
@@ -103,12 +103,12 @@ function confirmResults(firstName, lastName){
     var result = prompt("Enter in their First Name, Then Second Name separated by a space.", firstName + " " + lastName);
 
     firstName = result.substring(0, result.indexOf(" "));
-    lastName = result.substring(result.indexOf(" "), result.length);
+    lastName = result.substring(result.lastIndexOf(" ")+1, result.length);
 
     return "http://www.jailbase.com/api/1/search/?first_name=" + firstName + "&last_name=" + lastName;
 }
 
-var contexts = ["selection"];
+var contexts = ["selection", "page", "link"];
 for (var i = 0; i < contexts.length; i++)
 {
     var context = contexts[i];
