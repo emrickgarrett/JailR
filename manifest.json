@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+
+    "name": "JailR",
+    "description": "Background Check Your Friends",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon" : "tobin.jpg",
+        "popup":"popup.html"
+    },
+
+    "background" :{
+        "page" : "background.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["jquery.js", "myscript.js"]
+        }
+    ],
+
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "contextMenus",
+        "tabs"
+    ]
+}
