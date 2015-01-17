@@ -1,0 +1,21 @@
+.result-table{
+
+}
+
+.mugshot, .name, .county-state, .book-date, .charges{
+    text-align:center;
+    font-size:1em;
+}
+
+.mugshot{
+    width:3em;
+    height:3em;
+}
+
+.charges{
+    color: red;
+}
+
+.county-state{
+    font-weight:bold;
+}
