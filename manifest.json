@@ -5,7 +5,8 @@
     "description": "Background Check Your Friends",
     "version": "1.0",
     "browser_action": {
-        "default_icon" : "joint.png"
+        "default_icon" : "joint.png",
+        "default_popup" : "popup.html"
     },
 
     "background" :{
