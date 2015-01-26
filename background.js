@@ -22,6 +22,9 @@ function savetext(info,tab) {
     if (seltext) {
         //alert("text=" + seltext);
 
+        //TODO
+        //replace with Black Book api thing (check commit message)
+
         var firstName = seltext.substring(0, seltext.indexOf(" "));
         var lastName = seltext.substring(seltext.lastIndexOf(" ") + 1, seltext.length);
 
@@ -99,6 +102,9 @@ function popup(result)
 }
 
 function confirmResults(firstName, lastName){
+
+    //TODO
+    //replace with Black Book API (See commit Message)
 
     var result = prompt("Enter in their First Name, Then Second Name separated by a space.", firstName + " " + lastName);
 
